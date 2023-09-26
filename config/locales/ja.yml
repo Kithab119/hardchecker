@@ -1,0 +1,7 @@
+ ja:
+    enums:
+      memo:
+        level:
+          easy: "低"
+          normal: "中"
+          hard: "高"
