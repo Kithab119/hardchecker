@@ -1,4 +1,4 @@
-class MemoController < ApplicationController
+class MemosController < ApplicationController
 
   def create
     @memo = Memo.new

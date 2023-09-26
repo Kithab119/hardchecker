@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
   devise_for :users, skip: [:confirmations, :omniauth, :passwords, :unlocks], controllers: {
-    registrations: "user/registrations",
-    sessions: "user/sessions"
+    registrations: "users/registrations",
+    sessions: "users/sessions"
   }
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :memo
+  scope module: :user do
+    root "users/sessions#new"
+  end
+
+  resources :memos
+
 end
